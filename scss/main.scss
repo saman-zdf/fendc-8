@@ -1,0 +1,304 @@
+// (sub-heading at the top of the app UI)
+$Pale-Violet: hsl(276, 100%, 81%);
+
+//  (chat on the left)
+$Moderate-Violet: hsl(276, 55%, 52%);
+
+//  (chat on the right)
+$Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+
+// (placeholder text):
+$Grayish-Blue: hsl(206, 6%, 79%);
+
+//  (main heading)
+$Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+
+// (paragraph)
+$Dark-Grayish-Violet: hsl(270, 7%, 64%);
+
+//Gradients
+$Light-Magenta: hsl(293, 100%, 63%);
+$Light-Violet: hsl(264, 100%, 61%);
+
+// secondary
+// (app background)
+$Light-Grayish-Violet: hsl(270, 20%, 96%);
+$Light-Grayish-Violet2: hsl(270, 100%, 94%);
+
+// (submit button background)
+$Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+//  (radio button outline)
+$Very-Light-Magenta: hsl(289, 100%, 72%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.3;
+  background: $Light-Grayish-Violet;
+  font-size: 12px;
+  z-index: -1;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+ul {
+  list-style-type: none;
+}
+.main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    z-index: -1;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+    transform: translateX(-100px);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    z-index: -1;
+    opacity: 0.05;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    transform: translateX(200px);
+  }
+}
+
+.app {
+  max-width: 350px;
+  z-index: 1;
+  border-radius: 60px;
+  background: #fff;
+  padding: 0.7rem;
+  margin-right: 10rem;
+  margin-left: 2rem;
+  box-shadow: 5px 5px 15px $Grayish-Blue;
+  &-heading {
+    display: grid;
+    z-index: 999;
+    grid-template-columns: 1fr 1fr 10fr 1fr;
+    align-items: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 2rem 1rem 0.5rem;
+    background: linear-gradient(
+      to right,
+      hsl(264, 100%, 61%),
+      hsl(293, 100%, 63%)
+    );
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 75px;
+      min-width: 180px;
+      height: 22px;
+      background: #fff;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+    h3 {
+      color: #fff;
+    }
+  }
+  &-icon {
+    color: white;
+    font-size: 1.2rem;
+  }
+  &-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-right: 1rem;
+  }
+  &-status {
+    color: $Pale-Violet;
+  }
+
+  &-dots {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #fff;
+      top: 10px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #fff;
+      top: -10px;
+    }
+  }
+  &-text {
+    background: $Light-Grayish-Violet2;
+    color: $Moderate-Violet;
+    padding: 0.4rem 0.875rem;
+    margin: 0.5rem 1rem;
+    max-width: 220px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-weight: 500;
+  }
+  &-dogs {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0.5rem;
+  }
+  &-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin: 0 0.5rem;
+  }
+  &-replys {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-reply {
+    padding: 1rem;
+    color: $Moderate-Violet;
+    font-weight: 500;
+    background-color: #fff;
+    max-width: 220px;
+    margin: 0.3rem 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  &-pricing {
+    background: linear-gradient(
+      to right,
+      hsl(264, 100%, 61%),
+      hsl(293, 100%, 63%)
+    );
+    margin: 0.3rem 1rem;
+    max-width: 270px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    color: #fff;
+    padding: 0.7rem 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  &-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid $Pale-Violet;
+    margin-right: 1rem;
+  }
+  &-price {
+    justify-self: end;
+  }
+  &-message {
+    margin-top: 1rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  &-input {
+    border: none;
+    padding: 1.2rem 1rem;
+    width: 90%;
+    border-radius: 40px;
+    margin-bottom: 1rem;
+    &::placeholder {
+      color: $Grayish-Blue;
+      font-size: 1rem;
+    }
+  }
+  &-icon2 {
+    position: absolute;
+    right: 10%;
+    top: 18px;
+    font-size: 1.2rem;
+    color: $Very-Dark-Desaturated-Violet;
+  }
+}
+.container {
+  background: $Light-Grayish-Violet;
+  border-radius: 50px;
+}
+
+.showcase {
+  &-content {
+    max-width: 550px;
+  }
+  &-title {
+    color: $Very-Dark-Desaturated-Violet;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  &-lead {
+    color: $Dark-Grayish-Violet;
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+}
+@media (max-width: 1000px) {
+  .main {
+    flex-direction: column;
+    &::before {
+      content: "";
+      width: 360px;
+    }
+    &::after {
+      content: "";
+      display: none;
+    }
+  }
+  .app {
+    margin: 500px auto 5rem;
+  }
+  .showcase {
+    &-content {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 450px;
+    }
+    &-lead {
+      margin: 2rem;
+    }
+  }
+}

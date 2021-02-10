@@ -219,33 +219,18 @@ ul {
       display: none; }
   .app {
     margin: 500px auto 5rem;
-    max-width: 300px;
+    max-width: 330px;
     font-size: 12px; }
     .app-heading::before {
       content: "";
       left: 52px;
       width: 160px; }
-  .showcase {
-    position: relative; }
-    .showcase::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 500px;
-      height: 600px;
-      background: linear-gradient(#8838ff, #e942ff);
-      z-index: 1;
-      opacity: 0.05;
-      border-top-left-radius: 300px;
-      border-top-right-radius: 300px;
-      transform: translateX(200px); }
-    .showcase-content {
-      margin: 0 auto;
-      text-align: center;
-      max-width: 450px; }
-    .showcase-title {
-      font-size: 2.2rem; }
-    .showcase-lead {
-      margin: 2rem;
-      font-size: 0.875; } }
+  .showcase-content {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 450px; }
+  .showcase-title {
+    font-size: 2.2rem; }
+  .showcase-lead {
+    margin: 2rem;
+    font-size: 0.875; } }

@@ -290,6 +290,15 @@ ul {
   }
   .app {
     margin: 500px auto 5rem;
+    max-width: 300px;
+    font-size: 12px;
+    &-heading {
+      &::before {
+        content: "";
+        left: 52px;
+        width: 160px;
+      }
+    }
   }
   .showcase {
     &-content {
@@ -297,8 +306,12 @@ ul {
       text-align: center;
       max-width: 450px;
     }
+    &-title {
+      font-size: 2.2rem;
+    }
     &-lead {
       margin: 2rem;
+      font-size: 0.875;
     }
   }
 }

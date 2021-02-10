@@ -218,10 +218,19 @@ ul {
       content: "";
       display: none; }
   .app {
-    margin: 500px auto 5rem; }
+    margin: 500px auto 5rem;
+    max-width: 300px;
+    font-size: 12px; }
+    .app-heading::before {
+      content: "";
+      left: 52px;
+      width: 160px; }
   .showcase-content {
     margin: 0 auto;
     text-align: center;
     max-width: 450px; }
+  .showcase-title {
+    font-size: 2.2rem; }
   .showcase-lead {
-    margin: 2rem; } }
+    margin: 2rem;
+    font-size: 0.875; } }
